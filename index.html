@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d996c53776.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="common.js"></script>
+</head>
+<body>
+    <div id="tool-bar">
+        <div class="container">
+            <select class="sel-size">
+                <option value="1">14px</option>
+                <option value="2" selected>16px</option>
+                <option value="3">20px</option>
+                <option value="4">24px</option>
+                <option value="5">30px</option>
+                <option value="6">42px</option>
+                <option value="7">60px</option>
+            </select>
+            <button class="btn-bold"><i class="fas fa-bold"></i></button>
+            <button class="btn-link"><i class="fas fa-link"></i></button>      
+            <button class="btn-image"><i class="far fa-image fa-lg"></i></button>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="container">
+            <div id="textarea">
+                <div id="text-contents" class="contents" contenteditable="true" placeholder="이곳에 내용을 입력하세요"></div>
+            </div>
+        </div>
+    </div>
+    <script src="TontTool.js"></script>
+    <script src="LinkTool.js"></script>
+    <script src="ImageTool.js"></script>
+    <script src="Textarea.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            
+            let textarea = new Textarea("#textarea > .contents", "#tool-bar");
+
+            const $contents = document.querySelector("#textarea > .contents");
+            const $linkBtn = document.querySelector(".btn-link");
+
+           
+        });
+    </script>
+</body>
+</html>
